@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Toko Produk Kami</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ===== NAVBAR ===== -->
+  <nav>
+    <a class="nav-logo" id="adminLogoBtn" title="Admin Login" href="javascript:void(0)">
+      <div class="nav-logo-img">
+        <!-- Logo dari assets/img/logo.png -->
+        <img src="assets/img/MoriBites Logotext.webp" alt="Logo" onerror="this.style.display='none'"/>
+      </div>
+      <span class="nav-brand">Mori<span>Bites</span>
+        <span id="adminBadge" class="admin-badge" style="display:none;">Admin</span>
+      </span>
+    </a>
+
+    <button class="hamburger" id="hamburger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#produk">Produk</a></li>
+      <li><a href="#about">Tentang</a></li>
+      <li><a id="navOrderBtn" href="#pesan" class="nav-order-btn">Pesan Sekarang</a></li>
+    </ul>
+  </nav>
+
+  <!-- ===== HERO ===== -->
+  <section class="hero" id="home">
+    <div class="hero-bg"></div>
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <p class="hero-eyebrow">✦ Healthy Cookies in Town</p>
+      <h1 class="hero-title">Nyemil Manis Tanpa<br><em>Rasa Bersalah</em></h1>
+      <p class="hero-subtitle">Suka nyemil manis tapi pengen tetap sehat? Temukan cookies manis sehatmu di sini!</p>
+      <div class="hero-cta">
+        <a href="#produk" class="btn-primary">Lihat Produk</a>
+        <a href="#pesan" class="btn-outline">Pesan Sekarang</a>
+      </div>
+    </div>
+    <div class="scroll-arrow">↓</div>
+  </section>
+
+  <!-- ===== PRODUK SLIDER ===== -->
+  <section class="section section-bg" id="produk">
+    <div class="section-header">
+      <p class="section-eyebrow">✦ Koleksi MoriBites</p>
+      <h2 class="section-title">Varian Cookies</h2>
+      <p class="section-sub">Kita punya banyak cookies yang bisa jadi favoritmu loh!</p>
+    </div>
+
+    <div class="slider-wrapper">
+      <div class="slider-track" id="sliderTrack">
+
+        <!-- Card 1 -->
+        <div class="product-card">
+          <div class="product-img">
+            <img src="assets/img/produk1.jpg" alt="Produk 1" onerror="this.style.display='none'"/>
+            <span style="position:relative;z-index:1;" id="placeholder-emoji-1">🌟</span>
+            <span class="product-badge">Terlaris</span>
+          </div>
+          <div class="product-info">
+            <p class="product-category">Kategori A</p>
+            <h3 class="product-name">Produk Unggulan Alpha</h3>
+            <p class="product-desc">Deskripsi singkat produk ini. Dibuat dengan bahan pilihan, nyaman dipakai sehari-hari.</p>
+            <div class="product-footer">
+              <span class="product-price">Rp 150.000</span>
+              <button class="product-order-btn" onclick="scrollToOrder('Produk Unggulan Alpha')">Pesan</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="product-card">
+          <div class="product-img" style="background: linear-gradient(135deg, #1a1a3e 0%, #2d2d6e 100%);">
+            <img src="assets/img/produk2.jpg" alt="Produk 2" onerror="this.style.display='none'"/>
+            <span style="position:relative;z-index:1;">💎</span>
+          </div>
+          <div class="product-info">
+            <p class="product-category">Kategori B</p>
+            <h3 class="product-name">Produk Premium Beta</h3>
+            <p class="product-desc">Varian premium dengan fitur ekstra. Cocok untuk kamu yang menginginkan yang terbaik.</p>
+            <div class="product-footer">
+              <span class="product-price">Rp 220.000</span>
+              <button class="product-order-btn" onclick="scrollToOrder('Produk Premium Beta')">Pesan</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="product-card">
+          <div class="product-img" style="background: linear-gradient(135deg, #1a2e1a 0%, #2d5e2d 100%);">
+            <img src="assets/img/produk3.jpg" alt="Produk 3" onerror="this.style.display='none'"/>
+            <span style="position:relative;z-index:1;">🌿</span>
+            <span class="product-badge" style="background:#16a34a;">Baru</span>
+          </div>
+          <div class="product-info">
+            <p class="product-category">Kategori C</p>
+            <h3 class="product-name">Produk Natural Gamma</h3>
+            <p class="product-desc">Formula natural, ramah lingkungan. Pilihan tepat untuk kamu yang peduli kelestarian alam.</p>
+            <div class="product-footer">
+              <span class="product-price">Rp 180.000</span>
+              <button class="product-order-btn" onclick="scrollToOrder('Produk Natural Gamma')">Pesan</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 4 -->
+        <div class="product-card">
+          <div class="product-img" style="background: linear-gradient(135deg, #2e1a1a 0%, #5e2d2d 100%);">
+            <img src="assets/img/produk4.jpg" alt="Produk 4" onerror="this.style.display='none'"/>
+            <span style="position:relative;z-index:1;">🔥</span>
+            <span class="product-badge" style="background:#ea580c;">Hot</span>
+          </div>
+          <div class="product-info">
+            <p class="product-category">Kategori D</p>
+            <h3 class="product-name">Produk Spesial Delta</h3>
+            <p class="product-desc">Edisi terbatas! Dapatkan sebelum kehabisan. Kualitas terjamin dengan garansi 30 hari.</p>
+            <div class="product-footer">
+              <span class="product-price">Rp 295.000</span>
+              <button class="product-order-btn" onclick="scrollToOrder('Produk Spesial Delta')">Pesan</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 5 -->
+        <div class="product-card">
+          <div class="product-img" style="background: linear-gradient(135deg, #1a1e2e 0%, #2d4a6e 100%);">
+            <img src="assets/img/produk5.jpg" alt="Produk 5" onerror="this.style.display='none'"/>
+            <span style="position:relative;z-index:1;">⭐</span>
+          </div>
+          <div class="product-info">
+            <p class="product-category">Kategori E</p>
+            <h3 class="product-name">Produk Exclusive Epsilon</h3>
+            <p class="product-desc">Hanya tersedia di sini. Formulasi eksklusif yang tidak akan kamu temukan di tempat lain.</p>
+            <div class="product-footer">
+              <span class="product-price">Rp 350.000</span>
+              <button class="product-order-btn" onclick="scrollToOrder('Produk Exclusive Epsilon')">Pesan</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 6 -->
+        <div class="product-card">
+          <div class="product-img" style="background: linear-gradient(135deg, #2e2a1a 0%, #6e5e2d 100%);">
+            <img src="assets/img/produk6.jpg" alt="Produk 6" onerror="this.style.display='none'"/>
+            <span style="position:relative;z-index:1;">🎁</span>
+          </div>
+          <div class="product-info">
+            <p class="product-category">Paket Bundling</p>
+            <h3 class="product-name">Paket Hemat Zeta</h3>
+            <p class="product-desc">Beli lebih, hemat lebih. Paket bundling terbaik untuk keluarga atau hadiah orang tersayang.</p>
+            <div class="product-footer">
+              <span class="product-price">Rp 450.000</span>
+              <button class="product-order-btn" onclick="scrollToOrder('Paket Hemat Zeta')">Pesan</button>
+            </div>
+          </div>
+        </div>
+
+      </div><!-- end slider-track -->
+    </div><!-- end slider-wrapper -->
+
+    <div class="slider-nav">
+      <button class="slider-btn" id="prevBtn" aria-label="Previous">&#8592;</button>
+      <div class="slider-dots" id="sliderDots"></div>
+      <button class="slider-btn" id="nextBtn" aria-label="Next">&#8594;</button>
+    </div>
+  </section>
+
+  <!-- ===== ORDER SECTION ===== -->
+  <section class="order-section" id="pesan">
+    <div class="order-container">
+      <div class="section-header">
+        <p class="section-eyebrow">✦ Form Pemesanan</p>
+        <h2 class="section-title">Pesan Sekarang</h2>
+        <div id="orderStatusPill" class="order-status-pill open">
+          <span class="dot-live"></span>
+          <span id="orderStatusText">Menerima Pesanan</span>
+        </div>
+      </div>
+
+      <!-- Closed message -->
+      <div class="order-closed-msg" id="orderClosedMsg">
+        <div class="closed-icon">🚫</div>
+        <h3>Pemesanan Ditutup</h3>
+        <p>Maaf, kami tidak menerima pesanan untuk saat ini.<br>Silakan kembali lagi nanti atau hubungi kami melalui media sosial.</p>
+      </div>
+
+      <!-- Form -->
+      <div class="order-form-wrap" id="orderFormWrap">
+        <h3 class="order-form-title">Isi Form Pemesanan</h3>
+        <p class="order-form-sub">Isi data di bawah ini dengan lengkap. Pesanan akan langsung kami proses.<br> <br> Note: Pengiriman GRATIS ONGKIR hanya berlaku di daerah Universitas Jember</p>
+
+        <form id="orderForm" onsubmit="submitOrder(event)">
+          <div class="form-grid">
+            <div class="form-group">
+              <label>Nama Lengkap *</label>
+              <input type="text" id="f_nama" placeholder="Nama kamu" required />
+            </div>
+            <div class="form-group">
+              <label>No. WhatsApp *</label>
+              <input type="tel" id="f_wa" placeholder="08xxxxxxxxxx" required />
+            </div>
+            <div class="form-group form-full">
+              <label>Alamat Pengiriman *</label>
+              <input type="text" id="f_alamat" placeholder="Jl. Contoh No. 123, Kota" required />
+            </div>
+            <div class="form-group">
+              <label>Produk yang Dipesan *</label>
+              <select id="f_produk" required>
+                <option value="" disabled selected>Pilih produk</option>
+                <option value="Produk Unggulan Alpha">Produk Unggulan Alpha – Rp 150.000</option>
+                <option value="Produk Premium Beta">Produk Premium Beta – Rp 220.000</option>
+                <option value="Produk Natural Gamma">Produk Natural Gamma – Rp 180.000</option>
+                <option value="Produk Spesial Delta">Produk Spesial Delta – Rp 295.000</option>
+                <option value="Produk Exclusive Epsilon">Produk Exclusive Epsilon – Rp 350.000</option>
+                <option value="Paket Hemat Zeta">Paket Hemat Zeta – Rp 450.000</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label>Jumlah *</label>
+              <input type="number" id="f_qty" placeholder="1" min="1" value="1" required />
+            </div>
+            <div class="form-group form-full">
+              <label>Catatan / Pesan Tambahan</label>
+              <textarea id="f_catatan" placeholder="Ambil waktu sore, ambil di dekat gerbang UNEJ, dll."></textarea>
+            </div>
+          </div>
+          <button type="submit" class="submit-btn" id="submitBtn">✦ Kirim Pesanan</button>
+        </form>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer id="about">
+    <div class="footer-logo"><img src="assets/img/MoriBites Logotext.webp" alt="MoriBites"></span></div>
+    <div class="footer-social">
+      <a href="https://instagram.com/moribitesidn" target="_blank" rel="noopener noreferrer">
+        <i class="bi bi-instagram"></i>
+        @moribitesidn
+      </a>
+    </div>
+    <p>Nyemil manis, tanpa rasa bersalah!</p>
+    <p style="margin-top:0.5rem;">© 2026 MoriBites. Hak cipta dilindungi.</p>
+  </footer>
+
+  <!-- ===== ADMIN BAR ===== -->
+  <div class="admin-bar" id="adminBar">
+    <div class="admin-bar-info">
+      Masuk sebagai <strong>Admin</strong> — Kelola status pemesanan
+    </div>
+    <div class="admin-controls">
+      <button class="toggle-order-btn close-btn" id="toggleOrderBtn" onclick="toggleOrderStatus()">
+        Tutup Pemesanan
+      </button>
+      <button class="admin-logout-btn" onclick="adminLogout()">Keluar</button>
+    </div>
+  </div>
+
+  <!-- ===== ADMIN MODAL ===== -->
+  <div class="modal-overlay" id="adminModal">
+    <div class="modal-box">
+      <div class="modal-logo">🔐</div>
+      <h3 class="modal-title">Admin Login</h3>
+      <p class="modal-sub">Masukkan kredensial admin untuk mengelola pemesanan</p>
+      <div class="modal-form">
+        <div class="modal-err" id="modalErr">Username atau password salah.</div>
+        <div class="form-group">
+          <label>Username</label>
+          <input type="text" id="adminUser" placeholder="Username" autocomplete="off" />
+        </div>
+        <div class="form-group">
+          <label>Password</label>
+          <input type="password" id="adminPass" placeholder="Password" autocomplete="off"
+            onkeydown="if(event.key==='Enter') submitAdminLogin()" />
+        </div>
+        <div class="modal-actions">
+          <button class="modal-cancel" onclick="closeAdminModal()">Batal</button>
+          <button class="modal-submit" onclick="submitAdminLogin()">Masuk</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast -->
+  <div class="toast" id="toast">
+    <div class="toast-title" id="toastTitle">Berhasil!</div>
+    <div id="toastMsg">Pesanan kamu telah terkirim.</div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
